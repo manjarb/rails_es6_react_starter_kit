@@ -72,7 +72,7 @@ require( 'babel-polyfill' );
 
 import React from 'react';
 
-var foo = require('./components/foo');
+import foo from './components/foo';
 
 const testo = 99;
 
