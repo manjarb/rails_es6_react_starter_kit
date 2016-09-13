@@ -85,3 +85,15 @@ write some es7 code
 ```javascript
 module.exports = function (n) { return n * 11 }
 ```
+
+
+# You have to move 
+
+```ruby
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+```
+
+from inside <head></head> to the place before closing </body>
+
+credit 
+[Rails + Browserify + React + es7](https://gist.github.com/oelmekki/c78cfc8ed1bba0da8cee)
