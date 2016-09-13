@@ -55,13 +55,12 @@ config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 
 * `syntax-async-function` and `transform-regenerator` allow to use es7 async functions
 
 
-## 4. `app/assets/javascripts/application.js`
+## 4. `app/assets/javascripts/bundle.js`
+
+create `bundle.js` and `main.js` inside `app/assets/javascripts/`
 
 ```ruby
-//= require jquery
-//= require jquery_ujs
 //= require main
-//= require turbolinks
 ```
 
 ## 5. `app/assets/javascripts/main.js`
@@ -87,13 +86,13 @@ module.exports = function (n) { return n * 11 }
 ```
 
 
-# You have to move 
+# You have to put 
 
 ```ruby
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'bundle', 'data-turbolinks-track' => true %>
 ```
 
-from inside `<head></head>` to the place before closing `</body>`
+before closing `</body>`
 
 credit 
 [Rails + Browserify + React + es7](https://gist.github.com/oelmekki/c78cfc8ed1bba0da8cee)
