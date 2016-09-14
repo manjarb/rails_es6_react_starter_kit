@@ -60,7 +60,7 @@ config.browserify_rails.commandline_options = "-t [ babelify --presets [ es2015 
 create `bundle.js` and `main.js` inside `app/assets/javascripts/`
 
 ```ruby
-//= require main
+require( 'main' );
 ```
 
 ## 5. `app/assets/javascripts/main.js`
